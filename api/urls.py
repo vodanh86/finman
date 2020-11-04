@@ -1,10 +1,6 @@
 from django.urls import path
 from rest_framework.routers import SimpleRouter
-from .views import (
-    BranchViewSet, StaffViewSet, CustomerViewSet,
-    CollateralTypeViewSet, CollateralViewSet,
-    LimitViewSet,
-)
+from .views import *
 
 router = SimpleRouter()
 router.register('branch', BranchViewSet, basename='store')

@@ -1,6 +1,10 @@
 # api/views.py
 from rest_framework import viewsets, generics
+from rest_framework.decorators import action
+from django.http import JsonResponse
+from api.controllers.customerController import searchCustomer
 from .models import Branch, Staff, Customer, Collateral, CollateralType, Limit
+
 from .serializers import (
     BranchSerializer, StaffSerializer, CustomerSerializer,
     CollateralTypeSerializer, CollateralSerializer,
@@ -18,6 +22,15 @@ class StaffViewSet(viewsets.ModelViewSet):
 class CustomerViewSet(viewsets.ModelViewSet):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
+    
+    @action(detail=False, methods=['get'], url_path='search')
+    def search(self, request, *args, **kwargs):
+        # custom code
+        phoneNumber = request.GET.get("phoneNumber")
+        customers = []
+        if phoneNumber:
+            customers = CustomerSerializer(searchCustomer(phoneNumber), many=True)
+        return JsonResponse(customers.data, safe=False)
 
 class CollateralTypeViewSet(viewsets.ModelViewSet):
     queryset = CollateralType.objects.all()
