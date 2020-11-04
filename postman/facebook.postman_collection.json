@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "10427aef-8281-4e1c-9398-079097c29082",
+		"name": "facebook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://graph.facebook.com/524529210893937?fields=access_token&access_token=EAAhrdZCbSI4YBAAOd5CSkmBuHTmwZC5TOy4OXhZCL0K9OKrfYeqAkhRsJaqHksGwGANwm7YZBTUv4LNAJhOpmp2spv9dOjE5yzjtE2QD750KLqnEH2HIwFdhioR2cr9wpdRlHWpHSegLOEygNhNN0JwdA6ROifCEcJiRvKOMjiGqIFUZAfdnJ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://graph.facebook.com/524529210893937?fields=access_token&access_token=EAAhrdZCbSI4YBAAOd5CSkmBuHTmwZC5TOy4OXhZCL0K9OKrfYeqAkhRsJaqHksGwGANwm7YZBTUv4LNAJhOpmp2spv9dOjE5yzjtE2QD750KLqnEH2HIwFdhioR2cr9wpdRlHWpHSegLOEygNhNN0JwdA6ROifCEcJiRvKOMjiGqIFUZAfdnJ",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"524529210893937"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "access_token"
+						},
+						{
+							"key": "access_token",
+							"value": "EAAhrdZCbSI4YBAAOd5CSkmBuHTmwZC5TOy4OXhZCL0K9OKrfYeqAkhRsJaqHksGwGANwm7YZBTUv4LNAJhOpmp2spv9dOjE5yzjtE2QD750KLqnEH2HIwFdhioR2cr9wpdRlHWpHSegLOEygNhNN0JwdA6ROifCEcJiRvKOMjiGqIFUZAfdnJ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://graph.facebook.com/v5.0/me/messages?access_token=EAAhrdZCbSI4YBAAOd5CSkmBuHTmwZC5TOy4OXhZCL0K9OKrfYeqAkhRsJaqHksGwGANwm7YZBTUv4LNAJhOpmp2spv9dOjE5yzjtE2QD750KLqnEH2HIwFdhioR2cr9wpdRlHWpHSegLOEygNhNN0JwdA6ROifCEcJiRvKOMjiGqIFUZAfdnJ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"messaging_type\": \"RESPONSE\",\n\"recipient\":{\n  \"id\":\"100039901472244\"\n},\n\"message\":{\n  \"text\":\"hello, world!\"\n}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/v5.0/me/messages?access_token=EAAhrdZCbSI4YBAAOd5CSkmBuHTmwZC5TOy4OXhZCL0K9OKrfYeqAkhRsJaqHksGwGANwm7YZBTUv4LNAJhOpmp2spv9dOjE5yzjtE2QD750KLqnEH2HIwFdhioR2cr9wpdRlHWpHSegLOEygNhNN0JwdA6ROifCEcJiRvKOMjiGqIFUZAfdnJ",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v5.0",
+						"me",
+						"messages"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "EAAhrdZCbSI4YBAAOd5CSkmBuHTmwZC5TOy4OXhZCL0K9OKrfYeqAkhRsJaqHksGwGANwm7YZBTUv4LNAJhOpmp2spv9dOjE5yzjtE2QD750KLqnEH2HIwFdhioR2cr9wpdRlHWpHSegLOEygNhNN0JwdA6ROifCEcJiRvKOMjiGqIFUZAfdnJ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://graph.facebook.com/v3.2/me/conversations?fields=id,participants&access_token=EAAhrdZCbSI4YBAAOd5CSkmBuHTmwZC5TOy4OXhZCL0K9OKrfYeqAkhRsJaqHksGwGANwm7YZBTUv4LNAJhOpmp2spv9dOjE5yzjtE2QD750KLqnEH2HIwFdhioR2cr9wpdRlHWpHSegLOEygNhNN0JwdA6ROifCEcJiRvKOMjiGqIFUZAfdnJ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://graph.facebook.com/v3.2/me/conversations?fields=id,participants&access_token=EAAhrdZCbSI4YBAAOd5CSkmBuHTmwZC5TOy4OXhZCL0K9OKrfYeqAkhRsJaqHksGwGANwm7YZBTUv4LNAJhOpmp2spv9dOjE5yzjtE2QD750KLqnEH2HIwFdhioR2cr9wpdRlHWpHSegLOEygNhNN0JwdA6ROifCEcJiRvKOMjiGqIFUZAfdnJ",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v3.2",
+						"me",
+						"conversations"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "id,participants"
+						},
+						{
+							"key": "access_token",
+							"value": "EAAhrdZCbSI4YBAAOd5CSkmBuHTmwZC5TOy4OXhZCL0K9OKrfYeqAkhRsJaqHksGwGANwm7YZBTUv4LNAJhOpmp2spv9dOjE5yzjtE2QD750KLqnEH2HIwFdhioR2cr9wpdRlHWpHSegLOEygNhNN0JwdA6ROifCEcJiRvKOMjiGqIFUZAfdnJ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.esv.org/v3/passage/html/?q=John+11:35",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{YOUR_KEY}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.esv.org/v3/passage/html/?q=John+11:35",
+					"protocol": "https",
+					"host": [
+						"api",
+						"esv",
+						"org"
+					],
+					"path": [
+						"v3",
+						"passage",
+						"html",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "John+11:35"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
